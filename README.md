@@ -1,4 +1,4 @@
 # BinToDec
 Binary to decimal converter.
 
-![](images/bin-converter.png)
+![](images/bin-converter.PNG)
