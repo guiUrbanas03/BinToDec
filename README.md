@@ -4,3 +4,5 @@
 Binary to decimal converter.
 
 ![](images/bin-converter.PNG)
+
+still fixing some bugs =)
