@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('./images/binary-wp.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.grid-container  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 12vh 63vh 12vh 3vh;
+    grid-template-areas: 'header'
+                         '.'
+                         'form'
+                         '.'
+                         'footer';
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #212121f5;
+    color: #fff;
+    grid-area: header;
+    padding: 2vh;
+    min-height: 70px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 22.5% 15% 22.5% 25%;
+    grid-template-areas: 'binary-label'
+                         'binary-input'
+                         'decimal-label'
+                         'decimal-input'
+                         'convert-button';
+    width: 40%;
+    min-width: 400px;
+    min-height: 400px;
+    padding: 2vw;
+    justify-self: center;
+    background-color: #212121f4;
+    grid-area: form;
+    overflow: hidden;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #111;
+}
+
+form > label {
+    align-self: flex-end;
+    color: white;
+    width: 95%;
+}
+
+form > button {
+    background-color: #2fc1d4;
+    font-size: 2rem;
+    width: 95%;
+    cursor: pointer;
+}
+
+form > button:hover {
+    background-color: #1c5f68;
+    color: #fff;
+}
+
+form > input {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 95%;
+}
+
+form > ::placeholder{
+    color: #aaa;
+}
+
+
+form > * {
+    border-radius: 5px;
+    margin: 10px;
+    max-height: 100px;
+}
+
+#binary-label {
+    grid-area: binary-label;
+
+}
+
+#binary-input {
+    grid-area: binary-input;
+
+}
+                
+#decimal-label {
+    grid-area: decimal-label;
+}
+
+#decimal-input {
+    grid-area: decimal-input;
+ }
+
+#convert-button {
+    grid-area: convert-button;
+ }
+
+
+footer {
+    color: #ddd;
+    grid-area: footer;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 650px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+}
